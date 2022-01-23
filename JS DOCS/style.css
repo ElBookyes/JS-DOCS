@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-black:#63646b;
+    --clr-background:#ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    grid-template-areas: 'navbar main main'
+                         'navbar main main'
+                         'navbar main main';
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    margin: 0;
+}
+
+header {
+    color: black;
+    font-size: 2.5rem;
+    font-weight:400;
+    padding: 0.5em 0em 0.2em 0.5em;
+}
+
+#navbar {
+    grid-area: navbar;
+    display: block;
+    color: var(--clr-black);
+    border-right: solid 2px var(--clr-black);
+    position: fixed;
+    min-width: 290px;
+    max-width: 500px;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+    overflow-y: scroll;
+}
+
+#main-doc {
+    grid-area: main;
+}
+
+.ok {
+    grid-area: navbar;
+    min-width:450px;
+}
+
+.sticky {
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+
+
+.navHeader {
+    border-bottom: solid 1px var(--clr-black);
+    padding: 1em;
+    color: black;
+    font-size: 2.5rem;
+    font-weight:600;
+}
+
+.navList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    list-style:none;
+    color: var(--clr-black);
+    font-size: 1.5rem;
+    padding: 1em;
+}
+
+.listItem {
+    border-bottom: solid 1px var(--clr-black);
+    padding: 1em;
+}
+
+.main-content {
+   font-size: 1.4rem; 
+   padding:0.5em 2.5em 0.2em 1.5em;
+   color: var(--clr-black);
+}
+
+@media (max-width:1120px) {
+    #navbar {
+        max-width: 345px;
+    }
+
+    .ok {
+        min-width: 340px;
+    }
+
+    .navHeader {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:985px) {
+    #navbar {
+        max-width: 300px;
+    }
+
+    .ok {
+        min-width: 290px;
+    }
+
+    .navHeader {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+}
